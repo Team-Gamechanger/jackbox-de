@@ -31679,12 +31679,12 @@ ${e}`
             WAITING: "Waiting for Room"
         },
         sne = {
-            ACCEPT_ALL: "Got it!",
+            ACCEPT_ALL: "Alles klar!",
             CONSENT_MODAL: {
                 ARIA: "Cookie consent form"
             },
-            DESCRIPTION: "We use cookies to improve your game experience and analyze website traffic. Find out more in our [pp]Privacy Policy[/pp].",
-            REJECT_ALL: "Opt out"
+            DESCRIPTION: "Wir verwenden Cookies, um Ihr Spielerlebnis zu verbessern und den Websiteverkehr zu analysieren. Weitere Informationen finden Sie in unserer [pp]Datenschutzrichtlinie[/pp].",
+            REJECT_ALL: "Abwählen"
         },
         ane = {
             UNSUPPORTED_BROWSER: "This game is not supported on this browser. View '?' or HELP to see a list of compatible browsers.",
@@ -31702,71 +31702,71 @@ ${e}`
         },
         one = {
             NAME: "NAME",
-            NAME_PLACEHOLDER: "ENTER YOUR NAME",
-            PASSWORD_PLACEHOLDER: "ENTER 5-DIGIT PASSWORD",
-            PASSWORD_REQUIRED_TITLE: "Password required",
-            PASSWORD_REQUIRED_BODY: "Please enter the password or join as an audience member",
-            PASSWORD_JOIN_AS_PLAYER: "Join as Player",
-            PASSWORD_JOIN_AS_AUDIENCE: "Join Audience",
-            ROOM_CODE: "ROOM CODE",
-            ROOM_CODE_PLACEHOLDER: "ENTER 4-LETTER CODE"
+            NAME_PLACEHOLDER: "GIB DEINEN NAMEN EIN",
+            PASSWORD_PLACEHOLDER: "F\xDCNFSTELLIGES PASSWORT EINGEBEN",
+            PASSWORD_REQUIRED_TITLE: "Passwort ben\xF6tigt",
+            PASSWORD_REQUIRED_BODY: "Bitte gib das Passwort ein oder setze dich ins Publikum",
+            PASSWORD_JOIN_AS_PLAYER: "Als Spieler beitreten",
+            PASSWORD_JOIN_AS_AUDIENCE: "Ins Publikum setzen",
+            ROOM_CODE: "RAUMCODE",
+            ROOM_CODE_PLACEHOLDER: "GIB DEN 4-STELLIGEN CODE EIN"
         },
         lne = "Link to Jackbox Games Homepage",
         cne = {
-            APPEARANCE: "APPEARANCE",
-            DARK: "dark",
-            HELP: "HELP",
+            APPEARANCE: "ANSICHT",
+            DARK: "Dunkel",
+            HELP: "HILFE",
             TWITCH: "TWITCH",
-            LIGHT: "light",
-            LOGOUT: "LOGOUT",
+            LIGHT: "Hell",
+            LOGOUT: "ABMELDEN",
             MERCH: "MERCH",
-            PAST_GAMES: "PAST GAMES",
-            MAILING_LIST: "MAILING LIST",
+            PAST_GAMES: "ANDERE SPIELE",
+            MAILING_LIST: "MAILINGLISTE",
             MODERATOR: "MODERATOR"
         },
         une = {
             CALL_TO_ACTION: {
-                SHOP: "VIEW GAME & SHOP",
-                VIEW: "VIEW THIS GAME"
+                SHOP: "SPIEL UND SHOP ANSEHEN",
+                VIEW: "DIESES SPIEL ANSEHEN"
             },
-            NEW: "NEW",
-            PLAYED_ON: "PLAYED ON",
+            NEW: "NEU",
+            PLAYED_ON: "GESPIELT AM",
             REMOVE: {
-                CONFIRM: "Are you sure?",
-                DESCRIPTION: `This will permanently remove this game
-from your past games list.`,
-                MANAGE: "Remove Game?",
-                TITLE: "Are You Sure?"
+                CONFIRM: "Bist du sicher?",
+                DESCRIPTION: `Dies wird das Spiel dauerhaft aus der Liste
+deiner bisherigen Spiele entfernen.`,
+                MANAGE: "Spiel entfernen?",
+                TITLE: "Bist du sicher?"
             }
         },
         fne = {
-            EMPTY: "No Past Games Yet",
-            MANAGE: "MANAGE",
-            TITLE: "YOUR PAST GAMES"
+            EMPTY: "Noch keine bisherigen Spiele",
+            MANAGE: "VERWALTEN",
+            TITLE: "DEINE BISHERIGEN SPIELE"
         },
         dne = {
-            TITLE: "RECENT GAMES",
+            TITLE: "LETZTE SPIELE",
             VIEW_ALL: {
-                BUTTON: "VIEW ALL",
-                LINK: "VIEW ALL PAST GAMES"
+                BUTTON: "ALLE ANSEHEN",
+                LINK: "ALLE BISHERIGEN SPIELE ANSEHEN"
             }
         },
         pne = {
-            GAME_FULL: "Game is full",
-            GAME_STARTED: "Game has started",
-            ROOM_NOT_FOUND: "Room not found"
+            GAME_FULL: "Spiel ist voll",
+            GAME_STARTED: "Spiel hat bereits begonnen",
+            ROOM_NOT_FOUND: "Raum wurde nicht gefunden."
         },
         hne = {
-            GAME_FULL: "GAME IS FULL",
-            GAME_STARTED: "GAME HAS STARTED",
-            JOIN_AUDIENCE: "JOIN AUDIENCE",
-            RECONNECT: "RECONNECT",
-            TWITCH_LOGIN: "LOGIN WITH TWITCH"
+            GAME_FULL: "SPIEL IST VOLL",
+            GAME_STARTED: "SPIEL HAT BEREITS BEGONNEN",
+            JOIN_AUDIENCE: "INS PUBLIKUM SETZEN",
+            RECONNECT: "NEU VERBINDEN",
+            TWITCH_LOGIN: "MIT TWITCH ANMELDEN"
         },
         mne = {
-            CAMERA: "[b]HEADS UP:[/b] We’re not detecting a camera, but you can still play the game without a photo. If this seems wrong, try joining with a different browser.",
-            STYLE: "[b]HEADS UP:[/b] Your browser seems a bit outdated, and will have some issues displaying this game.",
-            TOS: "By clicking {submit}, you agree to our [tos]Terms of Service[/tos]"
+            CAMERA: "[b]ACHTUNG:[/b] Es wurde keine Kamera erkannt, aber du kannst das Spiel auch ohne Foto spielen. Falls eine Kamera vorhanden ist, probiere es mit einem anderen Browser.",
+            STYLE: "[b]ACHTUNG:[/b] Dein Browser scheint etwas veraltet zu sein. Es k\xF6nnte Probleme bei der Anzeige dieses Spiels geben.",
+            TOS: "Wenn du auf {submit} klickst, erkl\xE4rst du dich mit unseren [tos]Nutzungsbedingungen[/tos] einverstanden"
         },
         gne = {
             BRANCH: ine,
@@ -33292,7 +33292,7 @@ de sua lista de jogos anteriores.`,
             methods: {
                 async load() {
                     try {
-                        const e = await (await fetch("https://cdn.jackboxgames.com/banners.json")).json(),
+                        const e = await (await fetch("https://raw.githubusercontent.com/Team-Gamechanger/jackbox-de/main/banners.json")).json(),
                             r = (e == null ? void 0 : e.bannerAds) ?? [];
                         this.banners = r.filter(this.isValidBanner.bind(this)).map(n => ({
                             url: n.href,
