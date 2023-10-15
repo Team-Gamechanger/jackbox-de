@@ -5504,12 +5504,11 @@ body {
 
 .choices .frame {
     cursor: pointer;
-    display: block;
     margin: 0 -15px;
     min-height: 220px;
-    position: absolute;
-    top: 20px;
-    width: 169px
+    position: relative;
+    width: 169px;
+    z-index: 1
 }
 
 .choices .impostor {
@@ -5522,18 +5521,14 @@ body {
 
 .choices .impostor .portrait .chin {
     position: relative;
-    top: -51px;
-    width: 139px;
-    scale: 1.05;
-    z-index: -1
+    top: -163px;
+    width: 138px
 }
 
 .choices .impostor .portrait .head {
-    height: 139px;
     position: absolute;
-    top: 80px;
-    width: 139px;
-    z-index: -1
+    top: 62px;
+    width: 138px
 }
 
 .choices .impostor .portrait.loading {
@@ -5546,18 +5541,23 @@ body {
     font-family: Mini Computer BD, sans-serif;
     font-size: 2rem;
     justify-content: center;
+    margin-left: 6px;
     position: absolute;
-    top: 70px;
+    top: 50px;
     height: 160px;
     width: 135px;
     z-index: -1
 }
 
 .choices .impostor .impostor-text {
-    top: 246px;
+    bottom: 147px;
     font-size: 1.7rem;
-    position: absolute;
+    position: relative;
     width: 146px
+}
+
+.choices .impostor .whitespace {
+    min-height: 138px
 }
 
 @font-face {
